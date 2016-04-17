@@ -4,6 +4,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import sidep.pweb.mvc.MVCConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import sidep.pweb.globalconf.PWebConfiguration;
 
 public class PWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -25,7 +26,7 @@ public class PWebInitializer extends AbstractAnnotationConfigDispatcherServletIn
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null;
+        return new Class<?>[] { PWebConfiguration.class };
     }
 
     @Override
