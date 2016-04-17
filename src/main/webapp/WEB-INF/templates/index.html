@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        {{ request.remoteUser }}
-    </body>
-</html>
+{% extends "template_parent" %}
+{% block title %} My Template {% endblock %}
+{% block content %} {{ request.remoteUser }}  {% endblock %}

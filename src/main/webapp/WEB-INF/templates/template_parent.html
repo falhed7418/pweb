@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}Default Title{% endblock %}
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ request.contextPath }}/resources/css/foundation.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ request.contextPath }}/resources/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="{{ request.contextPath }}/resources/foundation-icons/foundation-icons.css" />
+    </head>
+    <body>
+        <div class="row">
+            <div class="large-12 column">
+                {% block content %}
+                This is nothing
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
+
