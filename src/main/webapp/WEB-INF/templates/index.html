@@ -1,3 +1,14 @@
 {% extends "template_parent" %}
 {% block title %} My Template {% endblock %}
-{% block content %} {{ request.remoteUser }}  {% endblock %}
+{% block content %}
+
+<div class="row">
+    <div class="small-12 column"><input class="button alert" type="submit" value="logout">
+        <form  name="logoutform" action="{{ request.contextPath }}/logout" method="post">
+            <input type="hidden" name="{{ request.getAttribute("_csrf").getParameterName() }}"
+                                 value="{{ request.getAttribute("_csrf").getToken() }}">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
